@@ -9,7 +9,7 @@ export const ReferralList = () => {
   useEffect(() => {
     const fetchReferrals = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/referrals');
+        const response = await axios.get('https://referral-portal-1.onrender.com/referrals');
         setReferrals(response.data);
       } catch (err) {
         console.error('Failed to load referrals:', err);
