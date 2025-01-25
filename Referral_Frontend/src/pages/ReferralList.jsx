@@ -22,7 +22,7 @@ export const ReferralList = () => {
   const handleStatusChange = async (referralId, newStatus) => {
     try {
       setLoading(true);
-      const response = await axios.put(`http://localhost:5000/api/referrals/${referralId}`, {
+      const response = await axios.put(`https://referral-portal-1.onrender.com/${referralId}`, {
         status: newStatus,
       });
 
@@ -43,7 +43,7 @@ export const ReferralList = () => {
 
   // Function to handle the download or viewing of resume
   const handleDownloadResume = (resumeFilename) => {
-    const resumeUrl = `http://localhost:5000/resumes/${resumeFilename}`;
+    const resumeUrl = `https://referral-portal-1.onrender.com/${resumeFilename}`;
     window.open(resumeUrl, '_blank'); // Open the resume in a new tab
   };
 
