@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General layout styles */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-bar {
+  background-color: #4CAF50;
+  padding: 15px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu-button {
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  color: white;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust to ensure the nav is below the header */
+  right: 0;
+  background-color: #111;
+  width: 200px; /* Mobile nav menu width */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.mobile-nav.open {
+  display: block; /* Show mobile nav when open */
+}
+
+.mobile-nav button {
+  display: block;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 18px;
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+}
+
+.mobile-nav button:hover {
+  background-color: #ddd;
+}
+
+.main-content {
+  margin-top: 80px; /* Add space for the fixed navbar */
+  padding: 20px;
+  flex: 1;
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none; /* Hide hamburger menu on larger screens */
+  }
+
+  .mobile-nav {
+    display: flex !important; /* Always show on larger screens */
+    position: relative;
+    top: 0;
+    right: initial;
+    background-color: transparent;
+  }
+
+  .mobile-nav button {
+    background-color: transparent;
+    color: black;
+  }
+}

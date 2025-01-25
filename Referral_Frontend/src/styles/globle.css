@@ -1,0 +1,141 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .app-bar {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .nav-links button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .nav-links button:hover {
+    background-color: #0056b3;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #f9f9f9;
+    width: 250px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding-top: 20px;
+  }
+  
+  .sidebar.open {
+    display: block;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sidebar ul li button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li button:hover {
+    background-color: #0056b3;
+  }
+  
+  .main-content {
+    margin-top: 60px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Referral List Table Styling */
+.referral-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .referral-table th,
+  .referral-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .referral-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .referral-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .referral-table td {
+    font-size: 14px;
+  }
+  
+  /* For better mobile view */
+  @media (max-width: 768px) {
+    .referral-table th,
+    .referral-table td {
+      padding: 8px;
+    }
+  
+    .referral-table {
+      font-size: 12px;
+    }
+  }
+  
