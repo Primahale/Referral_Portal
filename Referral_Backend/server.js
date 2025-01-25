@@ -43,15 +43,24 @@ app.use(bodyParser.json());
 // Middleware
 app.use(express.json());
 
-const corsOptions = {
-  origin: ['http://localhost:3000', 'https://referral-portal-one.vercel.app'],
+const allowedOrigins = ['http://localhost:3000', 'https://referral-portal-one.vercel.app'];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-  
-}
+  credentials: true,  // if your app is using cookies for example
+}));
 
-app.use(cors(corsOptions));
 
+app.post('/referrals', (req, res) => {
+  res.send('Referral received');
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
