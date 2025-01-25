@@ -44,8 +44,10 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Your React app's URL
+  origin: ['http://localhost:3000', 'https://referral-portal-one.vercel.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
+  
 }
 
 app.use(cors(corsOptions));
